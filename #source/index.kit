@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/no rmalize.css">
   <link rel="stylesheet" href="css/styles.css">
   <link rel="shortcut icon" href="img/#.ico" type="image/x-icon">
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -12,55 +12,58 @@
 </head>
 
 <body>
+  <div class="page"> 
+    <!--в случае малого контента прибивает футер-->
+    <!-- @import "header.html" -->
 
-  <!-- @import "header.html" -->
-
-    <!-- BLOG -->
-    <section class="blog">
-      <div class="container">
-        <div class="flex-wrapper blog-tittle">
-          <h1> Блог
-            <span>XX заметок</span>
-          </h1> 
-          <input type="text" class="search">
-        </div>
-        <div class="flex-wrapper polaroids">
-          <div class="polaroid-card">
-            <a href="#">
-              <img src="" alt="" class="polaroid-img">
-              <h2>А тут новость какая-то вышла вот и пишу сообщить</h2>
-            </a>
+      <!-- BLOG -->
+      <section class="blog">
+        <div class="container">
+          <div class="flex-wrapper blog-tittle">
+            <h1> Блог
+              <span>XX заметок</span>
+            </h1> 
+            <form class="search-container" method="get"> 
+              <input type="text" class="search-field"   placeholder="Поиск по блогу..." >
+              <button class="search-button" type="#" value="">
+            </form>
           </div>
-          <div class="polaroid-card">
-            <a href="#">
-              <img src="" alt="" class="polaroid-img">
-              <h2>А тут новость какая-то вышла вот и пишу сообщить</h2>
-            </a>
+          <div class="flex-wrapper polaroids">
+            <div class="polaroid-card">
+              <a href="#">
+                <img src="" alt="">
+                <h2>А тут новость какая-то вышла вот и пишу сообщить</h2>
+              </a>
+            </div>
+            <div class="polaroid-card">
+              <a href="#">
+                <img src="" alt="">
+                <h2>А тут новость какая-то вышла вот и пишу сообщить</h2>
+              </a>
+            </div>
+            <div class="polaroid-card">
+              <a href="#">
+                <img src="" alt="">
+                <h2>А тут новость какая-то вышла вот и пишу сообщить</h2>
+              </a>
+            </div>
+            <div class="polaroid-card">
+              <a href="#">
+                <img src="" alt="">
+                <h2>А тут новость какая-то вышла вот и пишу сообщить</h2>
+              </a>
+            </div>
+
+
+              </a>
+            </div>
           </div>
-          <div class="polaroid-card">
-            <a href="#">
-              <img src="" alt="" class="polaroid-img">
-              <h2>А тут новость какая-то вышла вот и пишу сообщить</h2>
-            </a>
-          </div>
-          <div class="polaroid-card">
-            <a href="#">
-              <img src="" alt="" class="polaroid-img">
-              <h2>А тут новость какая-то вышла вот и пишу сообщить</h2>
-            </a>
-          </div>
-        </div>
+        </section>
+        <!-- /BLOG -->
 
-
-
-      </div>
-
-      
-
-    </section>
-    <!-- /BLOG -->
-
-  <script type="text/javascript" src="js/script.js"></script>
+      <!-- @import "footer.html" -->
+  </div>
+  <script src="js/script.js"></script>
 </body>
 
 </html>
