@@ -13,7 +13,7 @@ img{max-width: 100%;
 a{text-decoration: none;
 	color: inherit;}
 p,span,h1,h2,h3,h4,h5,h6{margin:0;padding:0;}
-
+a:focus, button:focus {outline: $scnd-color auto 2px;}
 body{
   margin: 0;
   padding: 0;
@@ -58,6 +58,12 @@ body{
 	height: 90px;
 	background: #102724;
 	z-index: 4;
+	@media (max-width: 767px) {	
+		position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
 }
 
 .header-wrapper{
@@ -78,6 +84,7 @@ body{
         z-index: 3;
         width: 30px;
         height: 20px;
+        margin-left: 20px;
         span{
             content: '';
             background-color: $light-color;
@@ -113,8 +120,8 @@ body{
       text-align: right;
       top: -100%;
       left: 0;
-      width: 100%;
-      height: 240px;
+      width: 101%;
+      height: auto;
       overflow: auto;
       padding: 90px 30px 15px 15px;
       transition: all 0.5s ease-out 0s;
@@ -139,7 +146,7 @@ body{
 	margin-bottom: 102px;
 }
 .blog-tittle {
-	margin: 90px 0 45px;
+	margin: 130px 0 45px;
 	align-items: center;
 	flex-wrap: wrap;
 	h1{
@@ -173,7 +180,7 @@ body{
   
   width: 100%;
   line-height: 1.3;	
-  &:hover{
+  &:focus{ 
 
   }
 
@@ -186,15 +193,13 @@ body{
   height: 24px;
 
   border: none;
-  outline: none;
-
   cursor: pointer;
-
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 24px;
   opacity: 0.9;
+  &:focus{outline: #555 auto 2px;}
 }
 
 .polaroids {
@@ -270,12 +275,13 @@ body{
 }
 .social-link {
 	display: flex;
+	margin-bottom: 15px;
 	svg{
 		fill: $scnd-color;
 		border-radius: 50%;
 		width: 35px;
 		height: 35px;
-		margin: 0 7.5px 15px;
+		margin: 0 7.5px;
 		transition: all 0.1s ease-out;
 		&:hover{transform: scale(1.1);}
 	}

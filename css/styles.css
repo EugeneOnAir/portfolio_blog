@@ -22,6 +22,10 @@ p, span, h1, h2, h3, h4, h5, h6 {
   padding: 0;
 }
 
+a:focus, button:focus {
+  outline: #faff38 auto 2px;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -78,6 +82,14 @@ body.lock {
   background: #102724;
   z-index: 4;
 }
+@media (max-width: 767px) {
+  .header {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+}
 
 .header-wrapper {
   align-items: center;
@@ -98,6 +110,7 @@ body.lock {
     z-index: 3;
     width: 30px;
     height: 20px;
+    margin-left: 20px;
   }
   .nav-burger span {
     content: "";
@@ -147,8 +160,8 @@ body.lock {
     text-align: right;
     top: -100%;
     left: 0;
-    width: 100%;
-    height: 240px;
+    width: 101%;
+    height: auto;
     overflow: auto;
     padding: 90px 30px 15px 15px;
     transition: all 0.5s ease-out 0s;
@@ -186,7 +199,7 @@ body.lock {
 }
 
 .blog-tittle {
-  margin: 90px 0 45px;
+  margin: 130px 0 45px;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -228,13 +241,15 @@ body.lock {
   width: 24px;
   height: 24px;
   border: none;
-  outline: none;
   cursor: pointer;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   right: 24px;
   opacity: 0.9;
+}
+.search-button:focus {
+  outline: #555 auto 2px;
 }
 
 .polaroids {
@@ -350,13 +365,14 @@ body.lock {
 
 .social-link {
   display: flex;
+  margin-bottom: 15px;
 }
 .social-link svg {
   fill: #faff38;
   border-radius: 50%;
   width: 35px;
   height: 35px;
-  margin: 0 7.5px 15px;
+  margin: 0 7.5px;
   transition: all 0.1s ease-out;
 }
 .social-link svg:hover {
