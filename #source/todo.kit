@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="shortcut icon" href="img/#.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ИМЯ СТРАНИЦЫ</title>
+</head>
+
+<body>
+  <div class="page"> 
+    <!--в случае малого контента прибивает футер-->
+    <!-- @import "header.html" -->
+
+      <!-- BUTTONS-VUE -->
+    <div class="container">
+      <div class="todo" id="todoApp" v-cloak> 
+        <h1>{{ title }}:</h1>
+        <div class="form-control">
+          <input 
+            type="text"
+            :placeholder="placeholderString"
+            v-model="inputValue"
+            @keypress.enter="addNewNote"
+          >
+        </div>
+        <button class="button" @click="addNewNote">Добавить</button>
+        <hr>
+        <ol class="list" v-if="notes.length !== 0">
+          <li class="list-item" v-for="(note, id) in notes" :key="note">
+           <span> <b>{{id+1}}.</b> {{ note }} </span>
+            <button class="button remove-btn" @click="removeNote(id)">Удалить</button>
+          </li>
+        </ol> 
+        <div v-else>Дел пока нет! <br> (но ты можешь добавить новое)</div>
+      </div>
+    </div>  
+        <!-- /BUTTONS-VUE -->
+
+      <!-- @import "footer.html" -->
+  </div>
+
+
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="js/script.js"></script>
+  <script src="js/appTodo.js"></script>
+</body>
+
+</html>

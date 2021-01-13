@@ -1,3 +1,7 @@
+[v-cloak] {
+  display: none;
+}
+
 @font-face {
   font-family: "Klyakson";
   src: url("../font/Klyakson.otf") format("opentype");
@@ -23,7 +27,7 @@ p, span, h1, h2, h3, h4, h5, h6 {
 }
 
 a:focus, button:focus {
-  outline: #faff38 auto 2px;
+  outline: #de874e auto 2px;
 }
 
 body {
@@ -151,7 +155,7 @@ body.lock {
 }
 
 .nav a:active, .nav a:hover {
-  color: #faff38;
+  color: #de874e;
 }
 @media (max-width: 767px) {
   .nav {
@@ -368,7 +372,7 @@ body.lock {
   margin-bottom: 15px;
 }
 .social-link svg {
-  fill: #faff38;
+  fill: #de874e;
   border-radius: 50%;
   width: 35px;
   height: 35px;
@@ -380,3 +384,94 @@ body.lock {
 }
 
 /*-- /FOOTER --*/
+/*-- VUE.JS --*/
+.buttons-vue {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top: 200px;
+}
+
+.button-vue {
+  width: 200px;
+  padding: 15px 30px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  border-radius: 3px;
+  background: #35a76e;
+  box-shadow: 0 -3px #102724 inset;
+  transition: 0.2s;
+}
+.button-vue:hover {
+  background: #102724;
+}
+.button-vue:active {
+  background: #21935a;
+  box-shadow: 0 3px #21935a inset;
+}
+
+/*-- /VUE.JS --*/
+/*-- TODO --*/
+.todo {
+  margin-top: 60px;
+}
+.todo h1 {
+  margin-bottom: 20px;
+}
+.todo input {
+  padding: 10px 15px;
+  margin-bottom: 20px;
+  border: 2px solid #102724;
+  border-radius: 3px;
+  background-color: #eeeeee;
+}
+
+.list {
+  width: 300px;
+  padding: 0;
+}
+.list p {
+  font-weight: 700;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.button {
+  padding: 10px 15px;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  border: 0;
+  border-radius: 3px;
+  background: #35a76e;
+  box-shadow: 0 -3px #102724 inset;
+  transition: 0.2s;
+}
+.button:hover {
+  background: #102724;
+}
+.button:active {
+  background: #21935a;
+  box-shadow: 0 3px #21935a inset;
+}
+
+.remove-btn {
+  font-size: 11px;
+  padding: 7px 10px;
+  background: #eb8f52;
+  box-shadow: 0 -3px #9e6037 inset;
+}
+.remove-btn:hover {
+  background: #9e6037;
+}
+.remove-btn:active {
+  background: #de874e;
+  box-shadow: 0 3px #de874e inset;
+}
+
+/*-- /TODO --*/

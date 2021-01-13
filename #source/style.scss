@@ -1,5 +1,8 @@
-$scnd-color:  #faff38;
+$scnd-color:  #de874e;
 $light-color: #fffef5;
+$dark-color: #102724;
+
+[v-cloak]{display: none;}
 
 @font-face {
 font-family:"Klyakson";
@@ -56,7 +59,7 @@ body{
 .header {
 	color: $light-color; 
 	height: 90px;
-	background: #102724;
+	background: $dark-color;
 	z-index: 4;
 	@media (max-width: 767px) {	
 		position: fixed;
@@ -126,7 +129,7 @@ body{
       padding: 90px 30px 15px 15px;
       transition: all 0.5s ease-out 0s;
       color: $light-color;
-      background-color: #102724;
+      background-color: $dark-color;
       &.active{top:0;}
     }
 }
@@ -259,7 +262,7 @@ body{
 .footer {
 	color: $light-color; 
 	height: 120px;
-	background: #102724;
+	background: $dark-color;
 	margin-top: auto;
 	padding: 20px 0 0;
 }
@@ -288,3 +291,76 @@ body{
 }
 
 /*-- /FOOTER --*/
+
+/*-- VUE.JS --*/
+.buttons-vue{
+	display: flex;
+	flex-wrap: wrap; 
+	padding-top: 200px; 
+}
+
+.button-vue{ 
+	width: 200px; 
+	padding: 15px 30px;
+	font-weight: 700;
+	color: white;
+	text-align: center; 
+	border-radius: 3px; 
+	background: rgb(53,167,110); 
+	box-shadow: 0 -3px $dark-color inset; 
+	transition: 0.2s;
+	&:hover { background: $dark-color; } 
+	&:active { 
+		background:rgb(33,147,90);
+		box-shadow: 0 3px rgb(33,147,90) inset; } }
+/*-- /VUE.JS --*/
+
+
+/*-- TODO --*/
+.todo{
+	margin-top: 60px;
+	h1{margin-bottom: 20px;}
+	input{
+		padding: 10px 15px;
+		margin-bottom: 20px;
+		border: 2px solid $dark-color;
+		border-radius: 3px;
+		background-color: #eeeeee;
+	}
+}
+
+.list{width: 300px; padding: 0; p{font-weight: 700;}}
+.list-item {		
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.button{ 	
+	padding: 10px 15px;
+	font-weight: 700;
+	color: white;
+	text-align: center; 
+	border: 0;
+	border-radius: 3px; 
+	background: rgb(53,167,110); 
+	box-shadow: 0 -3px $dark-color inset; 
+	transition: 0.2s; 
+	&:hover { background: $dark-color; } 
+	&:active { 
+		background:rgb(33,147,90);
+		box-shadow: 0 3px rgb(33,147,90) inset;
+	}
+}
+.remove-btn	{	
+	font-size: 11px;
+	padding: 7px 10px;
+	background: #eb8f52;
+	box-shadow: 0 -3px #9e6037 inset; 
+	&:hover { background: #9e6037; } 
+	&:active { 
+		background:#de874e;
+		box-shadow: 0 3px #de874e inset;}
+}
+
+/*-- /TODO --*/
